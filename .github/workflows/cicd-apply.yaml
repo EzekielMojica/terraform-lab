@@ -22,7 +22,7 @@ jobs:
       - uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
-          aws-region: us-east-1
+          aws-region: ap-southeast-1
 
       - run: terraform fmt -check
       - run: terraform init && terraform validate
@@ -39,7 +39,7 @@ jobs:
       - uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
-          aws-region: us-east-1
+          aws-region: ap-southeast-1
 
       - run: terraform init
       - run: terraform apply -input=false -auto-approve
