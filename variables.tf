@@ -6,4 +6,5 @@ variable "instance_type" {
 variable "db_password" {
   type      = string
   sensitive = true
+  default   = "password" # learning only, never hardcode real passwords
 }
