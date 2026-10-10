@@ -8,3 +8,8 @@ variable "db_password" {
   sensitive = true
   default   = "password" # learning only, never hardcode real passwords
 }
+
+variable "region" {
+  type    = string
+  default = "ap-southeast-1" # Singapore
+}
